@@ -30,7 +30,7 @@ const LANG_TO_EXTENSION = {
   swift: "swift",
   typescript: "ts",
 };
-const BASE_URL = "https://leetcode.com";
+const BASE_URL = "https://leetcode.cn";
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
