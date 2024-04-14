@@ -83,7 +83,7 @@ async function getInfo(submission, session, csrfToken) {
   // No need to break on first request error since that would be done when getting submissions
   const getInfo = async (maxRetries = 5, retryCount = 0) => {
     try {
-      const response = await axios.post("https://leetcode.com/graphql/", data, {
+      const response = await axios.post("https://leetcode.cn/graphql/", data, {
         headers,
       });
       const runtimePercentile = `${response.data.data.submissionDetails.runtimePercentile.toFixed(
@@ -228,7 +228,7 @@ async function getQuestionData(titleSlug, leetcodeSession, csrfToken) {
 
   try {
     const response = await axios.post(
-      "https://leetcode.com/graphql/",
+      "https://leetcode.cn/graphql/",
       graphql,
       { headers },
     );
@@ -353,7 +353,7 @@ async function sync(inputs) {
 
         const headers = graphqlHeaders(leetcodeSession, leetcodeCSRFToken);
         const response = await axios.post(
-          "https://leetcode.com/graphql/",
+          "https://leetcode.cn/graphql/",
           graphql,
           { headers },
         );
